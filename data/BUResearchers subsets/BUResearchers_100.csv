@@ -1,0 +1,99 @@
+,Author,first,ID,Student_Name,First,Tags,gender,URM,enter_date,finish,months,zip_code,job
+1,Abraham,Brian,55652299900,Brian Abraham,Brian,GPP,M,N,2008,2013,46,38105,Academia (non-faculty)
+2,Anton,Brian,7004980579,Brian Anton,Brian,IGERT,M,N,2002,2011,108,1938,Industry
+3,Appleton,Evan,55247140700,Evan Appleton,Evan,IGERT,M,N,2010,2016,64,2111,Academia (non-faculty)
+4,Azizi,Elham,55779242100,Elham Azizi,Elham,RA,F,N,2010,2014,48,10032,Academia
+5,Beane,Jennifer,6701403096,Jennifer Beane,Jennifer,IGERT,F,N,2001,2007,66,2118,Academia
+6,Becker,Elizabeth,57210447195,Elizabeth,Elizabeth Shea,T32,F,N,2015,2020,60,2139,Academia (non-faculty)
+7,Bhutkar,Arjun,8942355400,Arjun Bhutkar,Arjun,IGERT,M,N,2004,2008,51,2139,Academia (non-faculty)
+8,Bishop,Eric,36679660200,Eric Bishop,Eric,T32,M,N,2004,2012,92,NA,unknown
+9,Blake,William,36781580500,William Blake ,William,RA,M,N,2000,2003,29,2114,Industry
+10,Bohnuud,Tanggis,55325409400,Tanggis,Jisi,University Fellow,M,N,2009,2014,53,2142,Industry
+11,Bray,David,57208337681,David Bray,David,University Fellow,M,N,2015,2020,61,2141,Industry
+12,Brenke,Ryan,14629955500,Ryan Brenke,Ryan,IGERT,M,N,2003,2009,63,NA,Academia
+13,Briars,Emma,57197854631,Emma Briars,Emma,T32,F,N,2016,2021,63,2135,Industry
+14,Briers,Demarcus,57193094915,Demarcus Briers,Demarcus,T32,M,Y,2014,2018,51,2472,Industry
+15,Brockman,J.,8729171700,John Michael Brockman,John Michael,IGERT,M,N,2002,2009,76,53711,Industry
+16,Brothers,John,36547326300,John Brothers,John,T32,M,N,2007,2013,67,2142,Industry
+17,Burroughs,Alexander,35593621000,Alexander Burroughs,Alexander,GPP,M,N,2003,2008,51,20892,Government Lab
+18,Byrd,Allyson,56388494800,Allyson Byrd,Allyson,GPP,F,N,2012,2016,52,94080,Industry
+19,Byrne,David,55364019400,David Byrne,David,University Fellow,M,Y,2006,2012,65,1754,Industry
+20,Campbell,Joshua,37099704700,Joshua Campbell,Joshua,T32,M,N,2007,2012,55,2118,Academia
+21,Carrasco,Pro,56015096500,Sebastian Carrasco Pro,Sebastian,University Fellow,M,N,2016,2020,49,2110,Industry
+22,Chang,Yi,35214454100,Yi-Chien Chang,Yi-Chien,RA,M,N,2009,2016,76,2142,Industry
+23,Chen_Hao,Hao,57200631744,Hao Chen ,Hao,University Fellow,M,N,2013,2020,79,2141,Industry
+24,Chen_Rong,Rong,57188838762,Rong Chen,Rong,University Fellow,M,N,1999,2004,46,10022,Industry
+25,Cherukuri,Praveen,6507941191,Praveen Cherukuri,Praveen,GPP,M,N,2003,2007,48,57117,Industry
+26,Chevalier,Aaron,56708233400,Aaron Chevalier,Aaron,T32,M,N,2017,2022,59,2210,Industry
+27,Chiu,Hsuanchao,26767638000,Hsuan-Chao Chiu,Hsuan-Chao,University Fellow,M,N,2005,2011,68,"Hsinchu, Taiwan",Industry
+28,Chung,Jaeyoon,55470448500,Jaeyoon Chung,Jaeyoon,University Fellow,M,N,2011,2017,72,2139,Industry
+29,Clodfelter,Karl,6603235553,Karl Clodfelter,Karl,IGERT,M,N,2000,2007,76,2109,Industry
+30,Collins,Sara,55385437100,Sara (Baldwin) Collins,Sara,IGERT,F,N,2008,2014,64,2129,Industry
+31,Comeau,Stephen,6602518420,Stephen Comeau,Stephen,IGERT,M,N,2001,2007,65,6877,Industry
+32,Corbett,Sean,57193500402,Sean Corbett,Sean,University Fellow,M,N,2014,2019,57,2142,Industry
+33,Coulombe-Huntington,Jasmin,15044058600,Jasmin Coulombe-Huntington,Jasmin,University Fellow,M,N,2009,2013,43,"Montreal, Canada",Academia (non-faculty)
+34,Cui,Jike,36808172300,Jike Cui ,Jike,University Fellow,M,N,2004,2009,56,2142,Industry
+35,Derti,Adnan,6507643009,Adnan Derti,Adnan,IGERT,M,N,1999,2007,70,27560,Industry
+36,DiMucci,Demetrius,57218937397,Demetrius DiMucci,Demetrius,T32,M,Y,2014,2019,62,2140,Industry
+37,Ding,Chunming,8931706500,Chunming Ding,Chunming,RA,M,N,2000,2003,31,"Wenzhou, China",Academia
+38,Dreyfuss,Jonathan,12243429100,Jonathan Dreyfuss,Jonathan,IGERT,M,N,2009,2014,50,2215,Research Institute
+39,Driscoll,Michael,9637832700,Michael Driscoll,Michael,IGERT,M,N,2002,2008,64,94107,Entrepreneur
+40,Dumitriu,Alexandra,35101901700,Alexandra Dumitriu,Alexandra,University Fellow,F,N,2007,2012,55,2141,Industry
+41,Eichler,Gabriel,6603820860,Gabriel Eichler ,Gabriel,IGERT,M,N,2003,2008,51,"Basel, Switzerland",Industry
+42,Eslami,Rasekh,57192890447,Marzieh Eslami Rasekh,Marzieh,University Fellow,F,N,2016,2021,57,9212,Industry
+43,Faith,Jeremiah,8720989600,Jeremiah Faith ,Jeremiah,IGERT,M,N,2003,2008,52,10029,Academia
+44,Faits,Tyler,41861111300,Tyler Faits,Tyler,University Fellow,M,N,2014,2020,76,2141,Research Institute
+45,Faller,Lina,57192681753,Lina Faller,Lina,T32,F,N,2008,2014,64,2139,Industry
+46,Farrell,John,55568523240,John Farrell,John,BU Employee Tuition Remission,M,N,2006,2014,NA,2118,Academia (non-faculty)
+47,Federico,Anthony,57209908343,Anthony Federico,Anthony,T32,M,N,2017,2021,51,2215,Industry
+48,Flanigon,James,26531013600,James Flanigon,James,RA,M,N,2003,2009,60,2451,Entrepreneur
+49,Franzosa,Eric,25625992800,Eric Franzosa,Eric,T32,M,N,2006,2011,56,2215,Academia (non-faculty)
+50,Frith,Martin,13407194500,Martin Frith ,Martin,University Fellow,M,N,1999,2004,48,"Tokyo, Japan",Academia
+51,Fu_Yu,Yutao,7404433553,Yu Fu,Yu,University Fellow,M,N,2012,2018,67,98104,Industry
+52,Fu_Yutao,Yu,57193354260,Yutao Fu,Yutao,University Fellow,M,N,2002,2008,62,94538,Industry
+53,Fusaro,Vincent,6603308224,Vincent Fusaro ,Vincent,IGERT,M,N,2003,2009,63,94103,Industry
+54,Garamszegi,Sara,54400931400,Sara Garamszegi,Sara,IGERT,F,N,2009,2014,62,2141,Research Institute
+55,George,Elizabeth,37063252100,Elizabeth George ,Elizabeth,IGERT,F,N,2001,2007,60,6520,Academia (non-faculty)
+56,Gerrein,Joseph,16066756400,Joseph Gerrein,Joseph,T32,M,N,2008,2014,61,94080,Industry
+57,Gindin,Yevgeniy,37109684600,Yevgeniy Gindin,Yevgeniy,GPP,M,N,2009,2014,55,94063,Industry
+58,Glotova,Irina,57205460423,Irina Glotova,Irina,University Fellow,F,N,2009,2014,48,2139,Industry
+59,Goldford,Joshua,57201733294,Joshua Goldford,Joshua,University Fellow,M,N,2013,2018,59,2139,Academia (non-faculty)
+60,Gomes,Antonio,55620529100,Antonio Gomes,Antonio,University Fellow,M,N,2008,2013,59,2139,Industry
+61,Gower,Adam,7006264081,Adam Gower,Adam,BU Employee Tuition Remission,M,N,2006,2012,64,2218,Academia
+62,Granger,Brian,54408424200,Brian Granger,Brian,IGERT,M,N,2008,2015,73,2210,Industry
+63,Greenbaum,Jay,8588416000,Jason Greenbaum,Jason,IGERT,M,N,1999,2006,78,92037,Research Institute
+64,Guido,Nicholas,12345574200,Nicholas Guido ,Nicholas,IGERT,M,N,1999,2006,79,2421,Academia (non-faculty)
+65,Gurinovich,Anastasia,57193133830,Anastasia Gurinovich,Anastasia,University Fellow,F,N,2014,2019,57,2111,Academia
+66,Gusenleitner,Daniel,36995300700,Daniel Gusenleitner,Daniel,University Fellow,M,N,2011,2016,51,1760,Industry
+67,Gustafson,Adam,14832562900,Adam Gustafson,Adam,T32,M,N,2004,2009,52,97035,Entrepreneur
+68,Haas,Brian,8894467100,Brian Haas,Brian,Outside Lab,M,N,2017,2021,47,2141,Research Institute
+69,Halees,Anason,6507087082,Anason Halees ,Anason,Self-funded,M,N,2001,2007,60,"Riyadh, Saudi Arabia",Academia
+70,Hansen,Loren,57206609824,Loren Hansen,Loren,GPP,M,N,2005,2012,72,95134,Industry
+71,Harrison,Rhonda,7403906530,Rhonda Harrison,Rhonda,IGERT,F,Y,1999,2004,48,60304,Entrepreneur
+72,Haverty,Peter,7202101726,Peter Haverty,Peter,IGERT,M,N,1999,2005,59,94608,Industry
+73,Hayete,Boris,8251882000,Boris Hayete,Boris,IGERT,M,N,2002,2007,56,2139,Industry
+74,Heilbut,Adrian,6507265100,Adrian Heilbut,Adrian,Teaching Fellow,M,N,2010,2016,69,10027,Academia
+75,Hernandez,Yozen,26664496400,Yozen Hernandez,Yozen,IGERT,M,Y,2011,2019,95,10065,Academia (non-faculty)
+76,Hijazi,Kahkeshan,24721173700,Syeda Kahkeshan Hijazi,Syeda Kahkeshan,Fulbright Scholar,F,N,2009,2014,55,2139,Research Institute
+77,Hogan,John,57118954600,JD Hogan,JD,IGERT,M,N,2012,2018,77,2141,Industry
+78,Hong,Rui,57221313933,Rui Hong,Rui,University Fellow,M,N,2017,2023,65,NA,unknown
+79,Hu_Han,Lan,57188734053,Han Hu,Han,University Fellow,M,N,2008,2015,75,"Shenzen, China",Industry
+80,Hu_Lan,Han,55369456000,Lan Hu,Lan,University Fellow,F,N,2005,2010,52,10018,Industry
+81,Huang,Chialing,35214805900,Chia-Ling Huang,Chia-Ling,RA,F,N,2009,2014,52,2139,Research Institute
+82,Hung,Juihung,35215095900,Jui-Hung Hung,Jui-Hung,University Fellow,M,N,2007,2011,47,"Hsinchu City, Taiwan",Academia
+83,Hwang,Howook,23027287600,Howook Hwang,Howook,RA,M,N,2005,2010,52,10036,Industry
+84,Isaacs,Farren,6701742303,Farren Isaacs ,Farren,RA,M,N,2000,2003,28,6520,Academia
+85,Iyer,Sowmya,55353295500,Sowmya Iyer,Sowmya,University Fellow,F,N,2009,2015,68,2472,Industry
+86,Jacobs,Christopher,57195941777,Christopher Jacobs,Christopher,IGERT,M,N,2009,2016,70,2215,Academia (non-faculty)
+87,Jenkins,David,56915262900,David Jenkins,David,University Fellow,M,N,2014,2018,53,2110,Industry
+88,Kar,Amrita,57381746700,Amrita Kar,Amrita,Self-funded,F,N,2010,2016,75,2472,Industry
+89,Karagiannis,Tanya,57209908566,Tanya Karagiannis,Tanya,T32,F,N,2016,2021,61,2111,Academia (non-faculty)
+90,Karaoz,Ulas,6506761153,Ulas Karaoz,Ulas,RA,M,N,2001,2008,76,94720,Government Lab
+91,Karlsson,Elinor,9839207000,Elinor Karlsson ,Elinor,IGERT,F,N,2003,2008,55,1655,Academia
+92,Kartha,Vinay,56191625400,Vinay Kartha,Vinay,IGERT,M,N,2013,2018,53,94080,Industry
+93,Keenan,Jessica,57208328068,Jessica Keenan,Jessica,IGERT,F,N,2012,2019,86,2142,Industry
+94,Kishore,Dileep,57209908806,Dileep Kishore,Dileep,University Fellow,M,N,2016,2023,77,NA,unknown
+95,Klein,Joshua,56978566800,Joshua Klein,Joshua,University Fellow,M,N,2013,2018,65,2139,Industry
+96,Klitgord,Niels,9238332900,Niels Klitgord,Niels,University Fellow,M,N,2007,2011,48,92130,Industry
+97,Labadorf,Adam,35622079600,Adam Labadorf,Adam,IGERT,M,N,2012,2016,46,2210,Academia
+98,LaBarre,Brenna,54793089500,Brenna LaBarre,Brenna,GPP,F,N,2012,2018,70,2115,Academia (non-faculty)

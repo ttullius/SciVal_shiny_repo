@@ -1,0 +1,216 @@
+Author,First,ID,Tags,gender,enter_date,finish,months,job
+Bishop,Eric P.,16066756400,T32_fellow,M,2004,2012,92,Research Institute
+Gustafson,Adam M.,57192681753,T32_fellow,M,2004,2009,52,Entrepreneur
+Miles,Gregory D.,37099704700,T32_fellow,M,2004,2012,65,Industry
+Nogiec,Christopher D.,24376721100,T32_fellow,M,2005,2014,100,Academic (non-faculty)
+Riehl,William J.,56191625400,T32_fellow,M,2005,2011,68,Academic (non-faculty)
+Schneider,Stephanie,35214805900,T32_fellow,F,2005,2013,96,Academic (non-faculty)
+Franzosa,Eric A.,54793089500,T32_fellow,M,2006,2011,56,Academic (non-faculty)
+Brothers,John F.,57119700800,T32_fellow,M,2007,2013,67,Industry
+Parikh,Jignesh R.,56915262900,T32_fellow,M,2007,2012,55,Industry
+Faller,Lina L.,57201733294,T32_fellow,F,2008,2014,64,Industry
+Gerrein,Joseph,7401895887,T32_fellow,M,2008,2014,61,Industry
+Park,Richard W.,57000622500,T32_fellow,M,2008,2014,66,Industry
+Lancour,Daniel,6506580346,T32_fellow,M,2013,2019,77,Industry
+Quintin,Michael,57679324500,T32_fellow,M,2013,2020,86,Industry
+Wake,Christian,56250004000,T32_fellow,M,2013,2018,67,Industry
+Briers,Demarcus,54788286700,T32_fellow,M,2014,2018,51,Industry
+DiMucci,Demetrius,52564519900,T32_fellow,M,2014,2019,62,Industry
+Shaikho,Elmutaz Mohammed,6603820860,T32_fellow,M,2014,2018,45,Industry
+Becker,Elizabeth J.,35593621000,T32_fellow,F,2015,2020,60,Industry
+Patel,Devanshi,7103383479,T32_fellow,F,2015,2020,62,Industry
+Briars,Emma,57205493160,T32_fellow,F,2016,2021,63,Industry
+Karagiannis,Tanya T.,36547326300,T32_fellow,F,2016,2021,61,Academic (non-faculty)
+Federico,Anthony N.,57219663578,T32_fellow,M,2017,2021,51,Industry
+Bishop,Eric P.,25625992800,T32_fellow,M,2004,2012,92,Research Institute
+Gustafson,Adam M.,55812616900,T32_fellow,M,2004,2009,52,Entrepreneur
+Miles,Gregory D.,57199274251,T32_fellow,M,2004,2012,65,Industry
+Nogiec,Christopher D.,55720829900,T32_fellow,M,2005,2014,100,Academic (non-faculty)
+Riehl,William J.,26768298100,T32_fellow,M,2005,2011,68,Academic (non-faculty)
+Schneider,Stephanie,37063252100,T32_fellow,F,2005,2013,96,Academic (non-faculty)
+Franzosa,Eric A.,56978566800,T32_fellow,M,2006,2011,56,Academic (non-faculty)
+Brothers,John F.,6507770379,T32_fellow,M,2007,2013,67,Industry
+Parikh,Jignesh R.,57193500402,T32_fellow,M,2007,2012,55,Industry
+Faller,Lina L.,12243429100,T32_fellow,F,2008,2014,64,Industry
+Gerrein,Joseph,6507941191,T32_fellow,M,2008,2014,61,Industry
+Park,Richard W.,8871981500,T32_fellow,M,2008,2014,66,Industry
+Lancour,Daniel,57205460423,T32_fellow,M,2013,2019,77,Industry
+Quintin,Michael,15044058600,T32_fellow,M,2013,2020,86,Industry
+Wake,Christian,55574215236,T32_fellow,M,2013,2018,67,Industry
+Briers,Demarcus,8729171700,T32_fellow,M,2014,2018,51,Industry
+DiMucci,Demetrius,55236323000,T32_fellow,M,2014,2019,62,Industry
+Shaikho,Elmutaz Mohammed,55324573100,T32_fellow,M,2014,2018,45,Industry
+Becker,Elizabeth J.,54408424200,T32_fellow,F,2015,2020,60,Industry
+Patel,Devanshi,14832562900,T32_fellow,F,2015,2020,62,Industry
+Briars,Emma,37666023900,T32_fellow,F,2016,2021,63,Industry
+Karagiannis,Tanya T.,57201973169,T32_fellow,F,2016,2021,61,Academic (non-faculty)
+Federico,Anthony N.,36679660200,T32_fellow,M,2017,2021,51,Industry
+Bishop,Eric P.,26767638000,T32_fellow,M,2004,2012,92,Research Institute
+Gustafson,Adam M.,56003780500,T32_fellow,M,2004,2009,52,Entrepreneur
+Miles,Gregory D.,35215095900,T32_fellow,M,2004,2012,65,Industry
+Nogiec,Christopher D.,6507265100,T32_fellow,M,2005,2014,100,Academic (non-faculty)
+Riehl,William J.,9839207000,T32_fellow,M,2005,2011,68,Academic (non-faculty)
+Schneider,Stephanie,8720989600,T32_fellow,F,2005,2013,96,Academic (non-faculty)
+Franzosa,Eric A.,57118954600,T32_fellow,M,2006,2011,56,Academic (non-faculty)
+Brothers,John F.,57191430715,T32_fellow,M,2007,2013,67,Industry
+Parikh,Jignesh R.,35207342600,T32_fellow,M,2007,2012,55,Industry
+Faller,Lina L.,57201896002,T32_fellow,F,2008,2014,64,Industry
+Gerrein,Joseph,57192917347,T32_fellow,M,2008,2014,61,Industry
+Park,Richard W.,12345574200,T32_fellow,M,2008,2014,66,Industry
+Lancour,Daniel,8588416000,T32_fellow,M,2013,2019,77,Industry
+Quintin,Michael,36781580500,T32_fellow,M,2013,2020,86,Industry
+Wake,Christian,6507643009,T32_fellow,M,2013,2018,67,Industry
+Briers,Demarcus,8931706500,T32_fellow,M,2014,2018,51,Industry
+DiMucci,Demetrius,7801383060,T32_fellow,M,2014,2019,62,Industry
+Shaikho,Elmutaz Mohammed,6701742303,T32_fellow,M,2014,2018,45,Industry
+Becker,Elizabeth J.,57206230167,T32_fellow,F,2015,2020,60,Industry
+Patel,Devanshi,7202101726,T32_fellow,F,2015,2020,62,Industry
+Briars,Emma,8974877200,T32_fellow,F,2016,2021,63,Industry
+Karagiannis,Tanya T.,7102569495,T32_fellow,F,2016,2021,61,Academic (non-faculty)
+Federico,Anthony N.,55726335500,T32_fellow,M,2017,2021,51,Industry
+Bishop,Eric P.,7403906530,T32_fellow,M,2004,2012,92,Research Institute
+Gustafson,Adam M.,13407194500,T32_fellow,M,2004,2009,52,Entrepreneur
+Miles,Gregory D.,6603235553,T32_fellow,M,2004,2012,65,Industry
+Nogiec,Christopher D.,56388494800,T32_fellow,M,2005,2014,100,Academic (non-faculty)
+Riehl,William J.,55461500000,T32_fellow,M,2005,2011,68,Academic (non-faculty)
+Schneider,Stephanie,57207790706,T32_fellow,F,2005,2013,96,Academic (non-faculty)
+Franzosa,Eric A.,55247140700,T32_fellow,M,2006,2011,56,Academic (non-faculty)
+Brothers,John F.,7006264081,T32_fellow,M,2007,2013,67,Industry
+Parikh,Jignesh R.,57188926554,T32_fellow,M,2007,2012,55,Industry
+Faller,Lina L.,55353295500,T32_fellow,F,2008,2014,64,Industry
+Gerrein,Joseph,57220434589,T32_fellow,M,2008,2014,61,Industry
+Park,Richard W.,23027287600,T32_fellow,M,2008,2014,66,Industry
+Lancour,Daniel,7003383527,T32_fellow,M,2013,2019,77,Industry
+Quintin,Michael,57200677352,T32_fellow,M,2013,2020,86,Industry
+Wake,Christian,57188734053,T32_fellow,M,2013,2018,67,Industry
+Briers,Demarcus,57217935505,T32_fellow,M,2014,2018,51,Industry
+DiMucci,Demetrius,57220999014,T32_fellow,M,2014,2019,62,Industry
+Shaikho,Elmutaz Mohammed,57195407208,T32_fellow,M,2014,2018,45,Industry
+Becker,Elizabeth J.,56150078400,T32_fellow,F,2015,2020,60,Industry
+Patel,Devanshi,7102892052,T32_fellow,F,2015,2020,62,Industry
+Briars,Emma,57221313933,T32_fellow,F,2016,2021,63,Industry
+Karagiannis,Tanya T.,57206263052,T32_fellow,F,2016,2021,61,Academic (non-faculty)
+Federico,Anthony N.,55364019400,T32_fellow,M,2017,2021,51,Industry
+Bishop,Eric P.,55939071200,T32_fellow,M,2004,2012,92,Research Institute
+Gustafson,Adam M.,7103106882,T32_fellow,M,2004,2009,52,Entrepreneur
+Miles,Gregory D.,36934194700,T32_fellow,M,2004,2012,65,Industry
+Nogiec,Christopher D.,57217576878,T32_fellow,M,2005,2014,100,Academic (non-faculty)
+Riehl,William J.,53981878200,T32_fellow,M,2005,2011,68,Academic (non-faculty)
+Schneider,Stephanie,55652299900,T32_fellow,F,2005,2013,96,Academic (non-faculty)
+Franzosa,Eric A.,41861111300,T32_fellow,M,2006,2011,56,Academic (non-faculty)
+Brothers,John F.,6506761153,T32_fellow,M,2007,2013,67,Industry
+Parikh,Jignesh R.,57191491429,T32_fellow,M,2007,2012,55,Industry
+Faller,Lina L.,8559366000,T32_fellow,F,2008,2014,64,Industry
+Gerrein,Joseph,57038065400,T32_fellow,M,2008,2014,61,Industry
+Park,Richard W.,6602518420,T32_fellow,M,2008,2014,66,Industry
+Lancour,Daniel,6602184061,T32_fellow,M,2013,2019,77,Industry
+Quintin,Michael,8641549200,T32_fellow,M,2013,2020,86,Industry
+Wake,Christian,57206192333,T32_fellow,M,2013,2018,67,Industry
+Briers,Demarcus,57217670336,T32_fellow,M,2014,2018,51,Industry
+DiMucci,Demetrius,57291618600,T32_fellow,M,2014,2019,62,Industry
+Shaikho,Elmutaz Mohammed,24721173700,T32_fellow,M,2014,2018,45,Industry
+Becker,Elizabeth J.,24485728500,T32_fellow,F,2015,2020,60,Industry
+Patel,Devanshi,8894467100,T32_fellow,F,2015,2020,62,Industry
+Briars,Emma,35332988000,T32_fellow,F,2016,2021,63,Industry
+Karagiannis,Tanya T.,57196288397,T32_fellow,F,2016,2021,61,Academic (non-faculty)
+Federico,Anthony N.,57196483358,T32_fellow,M,2017,2021,51,Industry
+Bishop,Eric P.,55568523240,T32_fellow,M,2004,2012,92,Research Institute
+Gustafson,Adam M.,57222512244,T32_fellow,M,2004,2009,52,Entrepreneur
+Miles,Gregory D.,57192890447,T32_fellow,M,2004,2012,65,Industry
+Nogiec,Christopher D.,57203894757,T32_fellow,M,2005,2014,100,Academic (non-faculty)
+Riehl,William J.,57219091203,T32_fellow,M,2005,2011,68,Academic (non-faculty)
+Schneider,Stephanie,57218324999,T32_fellow,F,2005,2013,96,Academic (non-faculty)
+Franzosa,Eric A.,55484694200,T32_fellow,M,2006,2011,56,Academic (non-faculty)
+Brothers,John F.,57208328068,T32_fellow,M,2007,2013,67,Industry
+Parikh,Jignesh R.,26664496400,T32_fellow,M,2007,2012,55,Industry
+Faller,Lina L.,57200631744,T32_fellow,F,2008,2014,64,Industry
+Gerrein,Joseph,57194199499,T32_fellow,M,2008,2014,61,Industry
+Park,Richard W.,57218870010,T32_fellow,M,2008,2014,66,Industry
+Lancour,Daniel,57188838762,T32_fellow,M,2013,2019,77,Industry
+Quintin,Michael,57193133830,T32_fellow,M,2013,2020,86,Industry
+Wake,Christian,57554990500,T32_fellow,M,2013,2018,67,Industry
+Briers,Demarcus,57215778164,T32_fellow,M,2014,2018,51,Industry
+DiMucci,Demetrius,6603786498,T32_fellow,M,2014,2019,62,Industry
+Shaikho,Elmutaz Mohammed,57202223805,T32_fellow,M,2014,2018,45,Industry
+Becker,Elizabeth J.,56015096500,T32_fellow,F,2015,2020,60,Industry
+Patel,Devanshi,57217185859,T32_fellow,F,2015,2020,62,Industry
+Briars,Emma,57200691170,T32_fellow,F,2016,2021,63,Industry
+Karagiannis,Tanya T.,57208337681,T32_fellow,F,2016,2021,61,Academic (non-faculty)
+Federico,Anthony N.,57711930500,T32_fellow,M,2017,2021,51,Industry
+Bishop,Eric P.,54400931400,T32_fellow,M,2004,2012,92,Research Institute
+Gustafson,Adam M.,55470448500,T32_fellow,M,2004,2009,52,Entrepreneur
+Miles,Gregory D.,57193978645,T32_fellow,M,2004,2012,65,Industry
+Nogiec,Christopher D.,55859047600,T32_fellow,M,2005,2014,100,Academic (non-faculty)
+Riehl,William J.,57224074388,T32_fellow,M,2005,2011,68,Academic (non-faculty)
+Schneider,Stephanie,57217320831,T32_fellow,F,2005,2013,96,Academic (non-faculty)
+Franzosa,Eric A.,57188953395,T32_fellow,M,2006,2011,56,Academic (non-faculty)
+Brothers,John F.,36995300700,T32_fellow,M,2007,2013,67,Industry
+Parikh,Jignesh R.,6507087082,T32_fellow,M,2007,2012,55,Industry
+Faller,Lina L.,8942355400,T32_fellow,F,2008,2014,64,Industry
+Gerrein,Joseph,18134345500,T32_fellow,M,2008,2014,61,Industry
+Park,Richard W.,8643064700,T32_fellow,M,2008,2014,66,Industry
+Lancour,Daniel,10041754500,T32_fellow,M,2013,2019,77,Industry
+Quintin,Michael,25958237100,T32_fellow,M,2013,2020,86,Industry
+Wake,Christian,35101901700,T32_fellow,M,2013,2018,67,Industry
+Briers,Demarcus,57218937397,T32_fellow,M,2014,2018,51,Industry
+DiMucci,Demetrius,36910958200,T32_fellow,M,2014,2019,62,Industry
+Shaikho,Elmutaz Mohammed,57210447195,T32_fellow,M,2014,2018,45,Industry
+Becker,Elizabeth J.,57381746700,T32_fellow,F,2015,2020,60,Industry
+Patel,Devanshi,57203824832,T32_fellow,F,2015,2020,62,Industry
+Briars,Emma,57188960912,T32_fellow,F,2016,2021,63,Industry
+Karagiannis,Tanya T.,57193094915,T32_fellow,F,2016,2021,61,Academic (non-faculty)
+Federico,Anthony N.,57208764474,T32_fellow,M,2017,2021,51,Industry
+Bishop,Eric P.,8251882000,T32_fellow,M,2004,2012,92,Research Institute
+Gustafson,Adam M.,55642608100,T32_fellow,M,2004,2009,52,Entrepreneur
+Miles,Gregory D.,7004980579,T32_fellow,M,2004,2012,65,Industry
+Nogiec,Christopher D.,9637832700,T32_fellow,M,2005,2014,100,Academic (non-faculty)
+Riehl,William J.,7404433553,T32_fellow,M,2005,2011,68,Academic (non-faculty)
+Schneider,Stephanie,57212441980,T32_fellow,F,2005,2013,96,Academic (non-faculty)
+Franzosa,Eric A.,26531013600,T32_fellow,M,2006,2011,56,Academic (non-faculty)
+Brothers,John F.,24485139800,T32_fellow,M,2007,2013,67,Industry
+Parikh,Jignesh R.,14629955500,T32_fellow,M,2007,2012,55,Industry
+Faller,Lina L.,6603308224,T32_fellow,F,2008,2014,64,Industry
+Gerrein,Joseph,9238332900,T32_fellow,M,2008,2014,61,Industry
+Park,Richard W.,57209908566,T32_fellow,M,2008,2014,66,Industry
+Lancour,Daniel,55325409400,T32_fellow,M,2013,2019,77,Industry
+Quintin,Michael,57202880904,T32_fellow,M,2013,2020,86,Industry
+Wake,Christian,57218773320,T32_fellow,M,2013,2018,67,Industry
+Briers,Demarcus,57206609824,T32_fellow,M,2014,2018,51,Industry
+DiMucci,Demetrius,57209908343,T32_fellow,M,2014,2019,62,Industry
+Shaikho,Elmutaz Mohammed,57223876166,T32_fellow,M,2014,2018,45,Industry
+Becker,Elizabeth J.,56708233400,T32_fellow,F,2015,2020,60,Industry
+Patel,Devanshi,57221488554,T32_fellow,F,2015,2020,62,Industry
+Briars,Emma,11839007200,T32_fellow,F,2016,2021,63,Industry
+Karagiannis,Tanya T.,36808172300,T32_fellow,F,2016,2021,61,Academic (non-faculty)
+Federico,Anthony N.,56390249600,T32_fellow,M,2017,2021,51,Industry
+Bishop,Eric P.,55463335200,T32_fellow,M,2004,2012,92,Research Institute
+Gustafson,Adam M.,57205479364,T32_fellow,M,2004,2009,52,Entrepreneur
+Miles,Gregory D.,57223263527,T32_fellow,M,2004,2012,65,Industry
+Nogiec,Christopher D.,57191846099,T32_fellow,M,2005,2014,100,Academic (non-faculty)
+Riehl,William J.,55779242100,T32_fellow,M,2005,2011,68,Academic (non-faculty)
+Schneider,Stephanie,57440514500,T32_fellow,F,2005,2013,96,Academic (non-faculty)
+Franzosa,Eric A.,55369456000,T32_fellow,M,2006,2011,56,Academic (non-faculty)
+Brothers,John F.,57217799116,T32_fellow,M,2007,2013,67,Industry
+Parikh,Jignesh R.,57215188852,T32_fellow,M,2007,2012,55,Industry
+Faller,Lina L.,57223193937,T32_fellow,F,2008,2014,64,Industry
+Gerrein,Joseph,54380508100,T32_fellow,M,2008,2014,61,Industry
+Park,Richard W.,57197854631,T32_fellow,M,2008,2014,66,Industry
+Lancour,Daniel,57193354260,T32_fellow,M,2013,2019,77,Industry
+Quintin,Michael,57209908806,T32_fellow,M,2013,2020,86,Industry
+Wake,Christian,57221342678,T32_fellow,M,2013,2018,67,Industry
+Briers,Demarcus,56486642400,T32_fellow,M,2014,2018,51,Industry
+DiMucci,Demetrius,57188697800,T32_fellow,M,2014,2019,62,Industry
+Shaikho,Elmutaz Mohammed,57218260750,T32_fellow,M,2014,2018,45,Industry
+Becker,Elizabeth J.,57201116898,T32_fellow,F,2015,2020,60,Industry
+Patel,Devanshi,54791535000,T32_fellow,F,2015,2020,62,Industry
+Briars,Emma,35580983400,T32_fellow,F,2016,2021,63,Industry
+Karagiannis,Tanya T.,6701403096,T32_fellow,F,2016,2021,61,Academic (non-faculty)
+Federico,Anthony N.,55620529100,T32_fellow,M,2017,2021,51,Industry
+Briers,Demarcus,54685015900,T32_fellow,M,2014,2018,51,Industry
+DiMucci,Demetrius,56942714200,T32_fellow,M,2014,2019,62,Industry
+Shaikho,Elmutaz Mohammed,57195941777,T32_fellow,M,2014,2018,45,Industry
+Becker,Elizabeth J.,55385437100,T32_fellow,F,2015,2020,60,Industry
+Patel,Devanshi,37109684600,T32_fellow,F,2015,2020,62,Industry
+Briars,Emma,56291795100,T32_fellow,F,2016,2021,63,Industry
+Karagiannis,Tanya T.,35214454100,T32_fellow,F,2016,2021,61,Academic (non-faculty)
+Federico,Anthony N.,35622079600,T32_fellow,M,2017,2021,51,Industry
