@@ -55,8 +55,18 @@ ui <- fluidPage(
                                Gender = "gender",
                                Job = "job"),
                    selected = "enter_date"),
+      
       tags$hr(),
+      
+      checkboxGroupInput("checkGroup", label = h3("Choose job types"), 
+                         choices = list("Academia" = 1, "Academia (non-faculty)" = 2, "Industry" = 3, "Research Institute" = 4),
+                         selected = 1),
+     
+      
+      tags$hr(),
+      
       plotOutput("plotPie")
+      
     ),
     
     mainPanel(
@@ -71,21 +81,24 @@ ui <- fluidPage(
         
         tabPanel("metrics", DT::dataTableOutput("metricsTable")),
         
-        tabPanel("papers", plotOutput("plotPapers")),
-        tabPanel("citations", plotOutput("plotCitations")),
-        tabPanel("FWCI", plotOutput("plotFWCI")),
-        tabPanel("H_index", plotOutput("plotH_index")),
-        
+        #tabPanel("papers", plotOutput("plotPapers")),
+        #tabPanel("citations", plotOutput("plotCitations")),
+        #tabPanel("FWCI", plotOutput("plotFWCI")),
+        #tabPanel("H_index", plotOutput("plotH_index")),
+        tabPanel("plots", plotOutput("plotPapers"), plotOutput("plotFWCI"), plotOutput("plotCitations"), plotOutput("plotH_index")),
+      
         tabPanel("papers by year", DT::dataTableOutput("allPapersTable"), plotOutput("plotPapers_all_years"))
     )
-  )
-)
-)
+  )))
+
+
 
 
 # Define server logic  ----
 
 server <- function(input, output) {
+  
+  output$value <- renderPrint({ input$checkGroup })
   
   
 # Define the color for  graduates' jobs  ----
@@ -106,7 +119,8 @@ server <- function(input, output) {
     addCircles(data = data_locations, lat = ~ latitude, lng = ~ longitude, weight = 5, radius = 2000, popup = ~as.character(paste0(city)), label = ~as.character(job), color = ~pal2(job), fillOpacity = 0.5)
   })
   
-  
+
+
   #########  Use the load_file helper function (from helpers.R file) to load the user-supplied file with trainee metadata (Scopus ID, gender, enter date, finish date, job type. etc.)  #####
   
   Trainees <- reactive({

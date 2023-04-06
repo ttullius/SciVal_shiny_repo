@@ -194,7 +194,6 @@ ID_list
     
     #    +  ggtitle("average field-weighted citation impact by .data[[input$group]]")
     
-  
     
     metrics_summarised %>%
       
@@ -206,7 +205,7 @@ ID_list
     
   
  
-  
+  #######. make pie chart of jobs. ###########
     
     df_jobs <- Trainees %>% group_by(job) %>% summarise(n = n())
     
