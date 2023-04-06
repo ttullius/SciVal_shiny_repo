@@ -9,6 +9,7 @@ library(xml2)
 library(XML)
 library(ggplot2)
 
+source("helpers.R")
 
 ### use https://curlconverter.com/r/ to generate a SciVal XML call using the curl command from SciVal (e.g. https://dev.elsevier.com/scival.html#!/SciVal_Author_Lookup_API/authorMetrics)
 
@@ -126,7 +127,7 @@ library(ggplot2)
     all_df <- df_list %>% reduce(full_join, by='ID')
     all_df
     
-    all_df <- Trainees %>% inner_join(all_df2, by="ID")
+    all_df <- Trainees %>% inner_join(all_df, by="ID")
     all_df
     
     
@@ -148,3 +149,55 @@ library(ggplot2)
       mutate_if(is.numeric, round, digits = 2)
     
     metrics_summarised
+    
+    
+    #######.   test adding all years code from test_SciVal_app.R.  ##########
+    
+    ####  Call the makeSciValPapersAllYearsDF helper function to retrieve number of papers by year for each trainee   ###########
+    
+    full_df_papers_by_year <- makeSciValPapersAllYearsDF(ID_list, num_rows)
+    full_df_papers_by_year
+    
+    full_df_papers_by_year <- Trainees %>% inner_join(full_df_papers_by_year, by="ID") 
+    full_df_papers_by_year
+    
+    
+    #%>% select(-name)
+    
+    full_metric_list <- c('ID', 'gender', 'Tags', 'job')
+    full_df_papers_by_year <- full_df_papers_by_year %>% mutate(across(full_metric_list, ~as.factor(.)))
+    full_df_papers_by_year <- full_df_papers_by_year %>%
+      mutate(across(where(is.numeric), ~ ifelse(is.na(.), 0, .)))
+    
+    
+    as_tibble(full_df_papers_by_year)
+    
+    
+    ####  group entries by selected criterion  ################
+    
+    allPapers_summarised <- full_df_papers_by_year %>%
+      group_by(finish) %>% 
+      summarise(number = n(), '2012' = sum(`2012`), '2013' = sum(`2013`),'2014' = sum(`2014`),'2015' = sum(`2015`),'2016' = sum(`2016`),'2017' = sum(`2017`), '2018' = sum(`2018`), '2019' = sum(`2019`), '2020' = sum(`2020`), '2021' = sum(`2021`)) 
+    allPapers_summarised
+    
+    
+    #############  make tidy dataframe for plotting  ##############   
+    
+    
+    tidy_metrics <- gather(data = allPapers_summarised, 
+                           key = year, value = papers, -finish, -number)
+    tidy_metrics <- transform(tidy_metrics,
+                              year = as.numeric(year))
+    tidy_metrics
+    
+    #view structure of new data frame
+    str(tidy_metrics)
+    
+    tidy_metrics <- mutate(tidy_metrics, years_out = year - finish)
+    tidy_metrics
+    
+    tidy_sum <- tidy_metrics %>% 
+      group_by(years_out) %>%
+      summarise(papers = sum(papers))
+    tidy_sum
+    

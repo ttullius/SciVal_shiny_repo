@@ -5,12 +5,12 @@ library(ggplot2)
 
 ##############     read dataset, for testing. This dataset ("full_df_papers_by_year") was produced by test_SciVal_app.R   #########
 
-full_df <- read.csv("full_df_papers_by_year.csv")
-full_df
+full_df_papers_by_year <- read.csv("full_df_papers_by_year.csv")
+full_df_papers_by_year
 
 ################################   produce tidy dataset, for plotting  #############
 
-tidy_df <- full_df %>%
+tidy_df <- full_df_papers_by_year %>%
   pivot_longer(
     cols = starts_with("X"),
     names_to = "year",

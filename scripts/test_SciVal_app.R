@@ -19,11 +19,21 @@ source("helpers.R")
 
 Trainees <- read_csv("/Users/tom/Dropbox (BOSTON UNIVERSITY)/R/Shiny_map/data/BUResearchers_full.csv")
 
-ID_list <- Trainees %>% pull(ID) %>% paste(collapse =",")
-ID_list
-
 num_rows <- nrow(Trainees)
 num_rows
+
+if(num_rows > 100) {
+  Trainees1 <- Trainees[1:100, ]
+  Trainees2 <- Trainees[101:num_rows, ]
+  trainee_list <- list(Trainees1, Trainees2)
+}  else  {
+  trainee_list <- list(Trainees)
+}
+trainee_list
+
+
+ID_list <- sapply(trainee_list, get_ID_list)
+ID_list
 
   
 ####### collect and summarise metrics for each trainee from SciVal
@@ -50,15 +60,10 @@ num_rows
     full_df_citation_count
     
     
-    SciValMetric <-  "HIndices"
-    metric_name <- "H_index"
-    full_df_h_index <- makeSciValMetricDF(ID_list, num_rows, SciValMetric = "HIndices", metric_name = "H_index")
-    full_df_h_index
-    
    
 #######  combine the metric dataframes, merge with the trainee metadata datframe that was read in as a CSV, and clean up variable types  ############### 
     
-    df_list <- list(full_df_scholarly_output, full_df_citation_count, full_df_fwci, full_df_h_index) 
+    df_list <- list(full_df_scholarly_output, full_df_citation_count, full_df_fwci) 
     all_df <- df_list %>% reduce(full_join, by = 'ID')
     all_df <- Trainees %>% inner_join(all_df, by = 'ID')
     all_df
@@ -66,7 +71,7 @@ num_rows
     factor_list <- c('ID', 'enter_date', 'finish', 'gender', 'Tags', 'job')
     all_df <- all_df %>% mutate(across(factor_list, ~as.factor(.)))
     
-    double_list <- c('number_of_papers', 'number_of_citations', 'FWCI', 'H_index')
+    double_list <- c('number_of_papers', 'number_of_citations', 'FWCI')
     all_df <- all_df %>% mutate(across(double_list, ~as.double(.)))
     
     all_df <- all_df %>% mutate(across(where(is.numeric), ~ ifelse(is.na(.), 0, .)))
@@ -78,16 +83,12 @@ num_rows
   
     metrics_summarised <- all_df %>% 
       group_by(enter_date) %>% 
-      summarise(number = n(), mean_number_of_citations = mean(number_of_citations), mean_H_index = mean(H_index), mean_FWCI = mean(FWCI), mean_number_of_papers = mean(number_of_papers)) %>%
+      summarise(number = n(), mean_number_of_citations = mean(number_of_citations), mean_FWCI = mean(FWCI), mean_number_of_papers = mean(number_of_papers)) %>%
       mutate_if(is.numeric, round, digits = 0)
     metrics_summarised 
       
   
 
-
-    
-    
-    
     
 ####  Call the makeSciValPapersAllYearsDF helper function to retrieve number of papers by year for each trainee   ###########
      
@@ -137,26 +138,45 @@ num_rows
        summarise(papers = sum(papers))
      tidy_sum
      
+     
+     ############. test "Years Out" code.  #############
+     
+     tidy_df <- full_df_papers_by_year %>%
+       pivot_longer(
+         cols = starts_with("2"),
+         names_to = "year",
+         values_to = "papers",
+         values_drop_na = TRUE)
+     tidy_df
+     
+     #tidy_df <- tidy_df %>% mutate(across('year', str_replace, 'X', ''))
+     tidy_df <- transform(tidy_df, year = as.numeric(year))
+     tidy_df <- mutate(tidy_df, years_out = year - finish)
+     full_metric_list <- c('ID', 'gender', 'Tags', 'job')
+     tidy_df <- tidy_df %>% mutate(across(full_metric_list, ~as.factor(.)))
+     tidy_df <- tidy_df %>%
+       mutate(across(where(is.numeric), ~ ifelse(is.na(.), 0, .)))
+     as_tibble(tidy_df)
+     
+     
+     #############   calculate total number of papers for each value of years_out and grouping  #########
+     
+     tidy_sum <- tidy_df %>% 
+       group_by(Tags, years_out) %>%
+       summarise(number = n(), papers = sum(papers))
+     tidy_sum
+     
+     #############   calculate average number of papers for each value of years_out and grouping  #########
+     
+     tidy_sum_avg <- mutate(tidy_sum, avg_papers = papers/number)
+     tidy_sum_avg
+     
+     
+     
+     
 ##########################  make plots  ##################################    
      
-    tidy_sum %>% 
-       
-       ggplot(aes(x = years_out, y = papers, 
-                  group = gender, color = gender)) +
-       geom_line()+
-       theme_minimal() +
-       theme(panel.border = element_blank(), 
-             panel.grid.major = element_blank(),
-             panel.grid.minor = element_blank(), 
-             axis.line = element_line(colour = "gray")) +
-       ylab("") +
-       ggtitle("Number of papers published each year by BU Bioinformatics alumni ", 
-       ) + 
-       theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
-     
-     
-     
-    
+   
     metrics_summarised %>%
       
       ggplot(aes(x = enter_date, y = mean_number_of_papers)) + 
@@ -175,15 +195,7 @@ num_rows
     #    +  ggtitle("average field-weighted citation impact by .data[[input$group]]")
     
   
-    metrics_summarised %>%
-      
-      ggplot(aes(x = enter_date, y = mean_H_index)) + 
-      geom_col() +
-      theme(axis.title = element_text(size = 20), axis.text = element_text(size = 15))
     
-    #    +  ggtitle("average H_index by .data[[input$group]]")
-    
-  
     metrics_summarised %>%
       
       ggplot(aes(x = enter_date, y = mean_number_of_citations)) + 
@@ -205,4 +217,124 @@ num_rows
       coord_polar(theta = "y") +
       scale_fill_brewer() +
       theme_void()
+    
+    
+    
+    #############   plot total number of papers for each years_out and grouping  #########
+    
+   
+    ###############. by first-year funding. #######################
+    
+    
+     tidy_sum %>% 
+      
+      ggplot(aes(x = years_out, y = papers,
+                 group = Tags, color = Tags)) +
+      geom_line()+
+      theme_minimal() +
+      theme(panel.border = element_blank(), 
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(), 
+            axis.line = element_line(colour = "gray")) +
+      ylab("") +
+      theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
+    
+    
+    tidy_sum_avg %>% 
+      
+      ggplot(aes(x = years_out, y = avg_papers,
+                 group = Tags, color = Tags)) +
+      geom_line()+
+      theme_minimal() +
+      theme(panel.border = element_blank(), 
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(), 
+            axis.line = element_line(colour = "gray")) +
+      ylab("") +
+      theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
+    
+    
+    
+    
+   ############. by gender. ################
+     tidy_sum %>% 
+      
+      ggplot(aes(x = years_out, y = papers,
+                 group = gender, color = gender)) +
+      geom_line()+
+      theme_minimal() +
+      theme(panel.border = element_blank(), 
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(), 
+            axis.line = element_line(colour = "gray")) +
+      ylab("") +
+      theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
+    
+    
+    tidy_sum_avg %>% 
+      
+      ggplot(aes(x = years_out, y = avg_papers,
+                 group = gender, color = gender)) +
+      geom_line()+
+      theme_minimal() +
+      theme(panel.border = element_blank(), 
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(), 
+            axis.line = element_line(colour = "gray")) +
+      ylab("") +
+      theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
+    
+    
+    ############. by job ################  
+    
+     tidy_sum %>% 
+      
+      ggplot(aes(x = years_out, y = papers,
+                 group = job, color = job)) +
+      geom_line()+
+      theme_minimal() +
+      theme(panel.border = element_blank(), 
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(), 
+            axis.line = element_line(colour = "gray")) +
+      ylab("") +
+      theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
+    
+    
+    #############   plot average number of papers for each years_out and grouping  #########
+    
+    tidy_sum_avg %>% 
+      
+      ggplot(aes(x = years_out, y = avg_papers,
+                 group = job, color = job)) +
+      geom_line()+
+      theme_minimal() +
+      theme(panel.border = element_blank(), 
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(), 
+            axis.line = element_line(colour = "gray")) +
+      ylab("") +
+      theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
+    
+    
+    
+    ##############.  doesn't work. #####################
+    tidy_sum %>% 
+      
+      ggplot(aes(x = years_out, y = papers, 
+                 group = gender, color = gender)) +
+      geom_line()+
+      theme_minimal() +
+      theme(panel.border = element_blank(), 
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(), 
+            axis.line = element_line(colour = "gray")) +
+      ylab("") +
+      ggtitle("Number of papers published each year by BU Bioinformatics alumni ", 
+      ) + 
+      theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
+    
+    
+    
+    
   
