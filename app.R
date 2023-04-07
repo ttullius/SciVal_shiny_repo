@@ -58,12 +58,17 @@ ui <- fluidPage(
       
       tags$hr(),
       
-      checkboxGroupInput("checkGroup", label = h3("Choose job types"), 
-                         choices = list("Academia" = 1, "Academia (non-faculty)" = 2, "Industry" = 3, "Research Institute" = 4),
-                         selected = 1),
+      
+      checkboxGroupInput("checkGroup", label = h3("Choose jobs for 'years out' plots"), 
+                         choices = list("Academia" = "Academia", "Academia (non-faculty)" = "Academia (non-faculty)", "Industry" = "Industry", "Research Institute" = "Research Institute", "Government Lab" = "Government Lab", "Entrepreneur" = "Entrepreneur"), 
+                         selected = "Academia"),
      
       
       tags$hr(),
+      
+      #verbatimTextOutput("print"),
+      
+      #tags$hr(),
       
       plotOutput("plotPie")
       
@@ -80,14 +85,13 @@ ui <- fluidPage(
         tabPanel("trainees", DT::dataTableOutput("researcherTable")),
         
         tabPanel("metrics", DT::dataTableOutput("metricsTable")),
+        tabPanel("metrics plots", plotOutput("plotPapers"), plotOutput("plotFWCI"), plotOutput("plotCitations"), plotOutput("plotH_index")),
         
-        #tabPanel("papers", plotOutput("plotPapers")),
-        #tabPanel("citations", plotOutput("plotCitations")),
-        #tabPanel("FWCI", plotOutput("plotFWCI")),
-        #tabPanel("H_index", plotOutput("plotH_index")),
-        tabPanel("plots", plotOutput("plotPapers"), plotOutput("plotFWCI"), plotOutput("plotCitations"), plotOutput("plotH_index")),
-      
-        tabPanel("papers by year", DT::dataTableOutput("allPapersTable"), plotOutput("plotPapers_all_years"))
+        tabPanel("years out", DT::dataTableOutput("yearsOutTable")),
+        tabPanel("years out plots", plotOutput("plotYearsOutPapersAveraged"), plotOutput("plotYearsOutPapers")),
+        
+       
+        tabPanel("papers by year", plotOutput("plotPapers_all_years"), DT::dataTableOutput("allPapersTable"))
     )
   )))
 
@@ -219,9 +223,11 @@ server <- function(input, output) {
   })
   
 
+  
+  ####  Call the makeSciValPapersAllYearsDF helper function to retrieve number of papers by year for each trainee   ###########
+  
    papers_all_years_df <- reactive ({
     
-      ####  Call the makeSciValPapersAllYearsDF helper function to retrieve number of papers by year for each trainee   ###########
      
      full_df_papers_by_year <- makeSciValPapersAllYearsDF(ID_list(), num_rows())
      
@@ -229,7 +235,8 @@ server <- function(input, output) {
      
      ##  %>% select(-name)
      
-     metric_list <- c('ID', 'enter_date', 'finish', 'gender', 'Tags', 'job')
+    # metric_list <- c('ID', 'enter_date', 'finish', 'gender', 'Tags', 'job')
+     metric_list <- c('ID', 'gender', 'Tags', 'job')
      full_df_papers_by_year <- full_df_papers_by_year %>% mutate(across(metric_list, ~as.factor(.)))
      full_df_papers_by_year <- full_df_papers_by_year %>%
        mutate(across(where(is.numeric), ~ ifelse(is.na(.), 0, .)))
@@ -249,6 +256,64 @@ server <- function(input, output) {
      
    })   
    
+  
+  
+  #################  transform "papers by year" dataset (papers_all_years_df()) into numbers of papers published each year relative to year of finishing PhD (years out)
+  
+  papers_years_out_df <- reactive ({
+    
+    tidy_df <- papers_all_years_df() %>%
+    pivot_longer(
+      cols = starts_with("2"),
+      names_to = "year",
+      values_to = "papers",
+      values_drop_na = TRUE)
+  
+  tidy_df <- transform(tidy_df, year = as.numeric(year))
+  tidy_df <- mutate(tidy_df, years_out = year - finish)
+  full_metric_list <- c('ID', 'gender', 'Tags', 'job')
+  tidy_df <- tidy_df %>% mutate(across(full_metric_list, ~as.factor(.)))
+  tidy_df <- tidy_df %>%
+    mutate(across(where(is.numeric), ~ ifelse(is.na(.), 0, .)))
+  as_tibble(tidy_df)
+  
+  
+  ############.  subset  by list of jobs ##########
+  job_list <- input$checkGroup
+  tidy_df <- filter(tidy_df, job %in% job_list)
+  
+  as_tibble(tidy_df)
+  
+  })
+  
+  #############   calculate total number of papers for each value of years_out and grouping  #########
+  
+  papers_years_out_summarised_df <- reactive ({
+  
+  tidy_sum <- papers_years_out_df() %>% 
+    group_by(job, years_out) %>%
+    summarise(number = n(), papers = sum(papers))
+ 
+  as_tibble(tidy_sum)
+  
+  })
+  
+  #############   calculate average number of papers for each value of years_out and grouping  #########
+  
+  papers_years_out_summarised_averaged_df <- reactive ({
+    
+    tidy_sum_avg <- mutate(papers_years_out_summarised_df(), avg_papers = papers/number)
+  
+  as_tibble(tidy_sum_avg)
+  
+  })
+   
+   ###############   produce tables  ####################
+   
+  
+  #output$print <- renderPrint(input$checkGroup)
+  
+  
    
   output$allPapersTable <- DT::renderDataTable({
      
@@ -262,6 +327,51 @@ server <- function(input, output) {
  
 })
 
+  output$yearsOutTable <- DT::renderDataTable({
+    
+    papers_years_out_summarised_averaged_df()
+    
+  })
+  
+  ############# make plots ##################
+  
+  
+  output$plotYearsOutPapers <- renderPlot({
+    
+    papers_years_out_summarised_df() %>% 
+    
+    ggplot(aes(x = years_out, y = papers,
+               group = job, color = job)) +
+    geom_line()+
+    theme_minimal() +
+    theme(panel.border = element_blank(), 
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(), 
+          axis.line = element_line(colour = "gray")) +
+    ylab("") +
+    theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
+  
+  }) 
+  
+    
+  output$plotYearsOutPapersAveraged <- renderPlot({
+      
+    papers_years_out_summarised_averaged_df() %>% 
+    
+    ggplot(aes(x = years_out, y = avg_papers,
+               group = job, color = job)) +
+    geom_line()+
+    theme_minimal() +
+    theme(panel.border = element_blank(), 
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(), 
+          axis.line = element_line(colour = "gray")) +
+    ylab("") +
+    theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
+  
+  }) 
+  
+  
 output$plotPapers <- renderPlot({
     
   metrics_summarised() %>%
@@ -315,7 +425,7 @@ output$plotCitations <- renderPlot({
 output$plotPapers_all_years <- renderPlot({
     
   tidy_metrics <- gather(data = allPapers_summarised(), 
-                         key = year, value = papers, -.data[[input$group]])
+                         key = year, value = papers, -number, -.data[[input$group]])
   
   ggplot(tidy_metrics) +
     geom_line(aes(x = year, y = papers, 

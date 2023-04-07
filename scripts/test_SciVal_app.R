@@ -159,10 +159,18 @@ ID_list
      as_tibble(tidy_df)
      
      
+     
+     ############. test subset  by list of jobs ##########
+     job_list <- c("Academia", "Industry")
+     tidy_df <- filter(tidy_df, job %in% job_list)
+     #tidy_df <- filter(tidy_df, job == "Academia")
+     tidy_df
+     
+     
      #############   calculate total number of papers for each value of years_out and grouping  #########
      
      tidy_sum <- tidy_df %>% 
-       group_by(Tags, years_out) %>%
+       group_by(job, years_out) %>%
        summarise(number = n(), papers = sum(papers))
      tidy_sum
      
@@ -222,13 +230,13 @@ ID_list
     #############   plot total number of papers for each years_out and grouping  #########
     
    
-    ###############. by first-year funding. #######################
+    ###############. by job #######################
     
     
      tidy_sum %>% 
       
       ggplot(aes(x = years_out, y = papers,
-                 group = Tags, color = Tags)) +
+                 group = job, color = job)) +
       geom_line()+
       theme_minimal() +
       theme(panel.border = element_blank(), 
@@ -242,7 +250,7 @@ ID_list
     tidy_sum_avg %>% 
       
       ggplot(aes(x = years_out, y = avg_papers,
-                 group = Tags, color = Tags)) +
+                 group = job, color = job)) +
       geom_line()+
       theme_minimal() +
       theme(panel.border = element_blank(), 
